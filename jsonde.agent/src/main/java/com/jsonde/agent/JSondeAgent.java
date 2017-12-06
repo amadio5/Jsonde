@@ -44,7 +44,7 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
     public static void agentmain(String arg, final Instrumentation instrumentation) {
         final JSondeAgent jSondeAgent = new JSondeAgent(arg, instrumentation);
         new Thread(new Runnable() {
-        	System.out.println("Ciao");
+        	
             public void run() {
                 jSondeAgent.execute();
                 jSondeAgent.redefineLoadedClasses();
@@ -99,6 +99,7 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
         }).start();
     }
+    System.out.println("Ciao");
 
     public JSondeAgent(String arguments, Instrumentation instrumentation) {
 
