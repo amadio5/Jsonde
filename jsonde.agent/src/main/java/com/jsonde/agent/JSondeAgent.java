@@ -39,6 +39,7 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
         jSondeAgent.execute();
         jSondeAgent.setTransformer();
     }
+    System.out.println("Ciao");
 
     @SuppressWarnings("unused")
     public static void agentmain(String arg, final Instrumentation instrumentation) {
@@ -99,8 +100,7 @@ public class JSondeAgent implements MessageListener, ClassFileTransformer {
 
         }).start();
     }
-    System.out.println("Ciao");
-
+    
     public JSondeAgent(String arguments, Instrumentation instrumentation) {
 
         System.out.println("jSonde agent started");
